@@ -1,9 +1,12 @@
+import { Outlet } from "react-router";
+import Login from "../Login/Login";
 
 
 const Root =()=>{
     return (
         <div  className=''>
-          <p>Hello world.</p>
+          <Login></Login>
+          <Outlet></Outlet>
         </div>
     )
 }
