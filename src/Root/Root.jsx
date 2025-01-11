@@ -1,13 +1,15 @@
 import { Outlet } from "react-router";
-import Login from "../Login/Login";
+
+import { Container } from "@mui/material";
+import Navbar from "../Navbar/Navbar";
 
 
 const Root =()=>{
     return (
-        <div  className=''>
-          <Login></Login>
+        <Container>
+          <Navbar></Navbar>
           <Outlet></Outlet>
-        </div>
+        </Container>
     )
 }
 export default Root;
