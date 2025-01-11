@@ -1,5 +1,7 @@
 import { Box } from "@mui/material";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
+import { Link, NavLink } from "react-router";
+
 
 const Navbar =()=>{
     return (
@@ -21,7 +23,7 @@ const Navbar =()=>{
                      
 
             </div>
-            <p>Login</p>
+            <NavLink to='/login'>Login</NavLink>
         </div>
 
         </Box>

@@ -7,6 +7,8 @@ import {
 } from "react-router";
 import Root from './Root/Root.jsx';
 import AuthProvider from './AuthProvider/AuthProvider.jsx';
+import Login from "./Login/Login.jsx"
+import Register from "./Register/Register.jsx"
 
 
 
@@ -14,11 +16,16 @@ const router=createBrowserRouter([
   {
     path:'/',
     Component:Root,
-    // children:[
-    //  {
-      
-    //  }
-    // ]
+    children:[
+     {
+      path:'/login',
+      Component:Login,
+     },
+     {
+      path:'/register',
+      Component:Register,
+     }
+    ]
   }
 ])
 
