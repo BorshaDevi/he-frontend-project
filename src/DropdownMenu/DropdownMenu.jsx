@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import ClearAllIcon from '@mui/icons-material/ClearAll';
+import { NavLink } from "react-router";
 const DropdownMenu=() =>{
     const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -32,8 +33,9 @@ const DropdownMenu=() =>{
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleClose}>Menu</MenuItem>
-        <MenuItem onClick={handleClose}>Orders</MenuItem>
+        <NavLink to="/" className={({isActive}) => isActive ? "text-red-500 underline  " : "text-black" }><MenuItem onClick={handleClose}>Home</MenuItem></NavLink>
+        <NavLink to="/menu" className={({isActive}) => isActive ? "text-red-500 underline  " : "text-black" }><MenuItem onClick={handleClose}>Menu</MenuItem></NavLink>
+        <NavLink to="/orders" className={({isActive}) => isActive ? "text-red-500 underline " : "text-black" }><MenuItem onClick={handleClose}>Orders</MenuItem></NavLink>
         
       </Menu>
     </div>

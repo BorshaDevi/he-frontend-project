@@ -15,8 +15,9 @@ const Navbar =()=>{
             <div>
                    
             <ul className="lg:flex hidden">
-                    <NavLink to="" className={({isActive}) => isActive ? "text-red-500 underline " : "text-black" }><li className="ml-5">Menu</li></NavLink>
-                    <NavLink to="" className ={({isActive}) => isActive ?"text-red-500 underline " : "text-black" }><li className="ml-5">Orders</li></NavLink>
+            <NavLink to="/" className={({isActive}) => isActive ? "text-red-500 underline " : "text-black" }><li className="ml-5">Home</li></NavLink>
+                    <NavLink to="/menu" className={({isActive}) => isActive ? "text-red-500 underline " : "text-black" }><li className="ml-5">Menu</li></NavLink>
+                    <NavLink to="/orders" className ={({isActive}) => isActive ?"text-red-500 underline " : "text-black" }><li className="ml-5">Orders</li></NavLink>
                 </ul>
                  
             
