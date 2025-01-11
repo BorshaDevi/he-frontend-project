@@ -1,11 +1,11 @@
 import { Box } from "@mui/material";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
-import { Link, NavLink } from "react-router";
+import {  NavLink } from "react-router";
 
 
 const Navbar =()=>{
     return (
-        <Box className='bg-white shadow p-3 items-center  justify-center'>
+        <Box className='bg-white  p-3 items-center shadow-xl  justify-center'>
         <div className="flex justify-between">
             <p className="hidden lg:flex">Logo</p>
             <div className=" lg:hidden">
@@ -15,8 +15,8 @@ const Navbar =()=>{
             <div>
                    
             <ul className="lg:flex hidden">
-                    <li className="ml-5">Menu</li>
-                    <li className="ml-5">Order</li>
+                    <NavLink to="" className={({isActive}) => isActive ? "text-red-500 underline " : "text-black" }><li className="ml-5">Menu</li></NavLink>
+                    <NavLink to="" className ={({isActive}) => isActive ?"text-red-500 underline " : "text-black" }><li className="ml-5">Orders</li></NavLink>
                 </ul>
                  
             

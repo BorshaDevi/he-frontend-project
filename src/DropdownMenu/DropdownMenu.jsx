@@ -21,7 +21,7 @@ const DropdownMenu=() =>{
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-       <ClearAllIcon />
+       <ClearAllIcon className="text-black" />
       </Button>
       <Menu
         id="basic-menu"
@@ -33,7 +33,7 @@ const DropdownMenu=() =>{
         }}
       >
         <MenuItem onClick={handleClose}>Menu</MenuItem>
-        <MenuItem onClick={handleClose}>Order</MenuItem>
+        <MenuItem onClick={handleClose}>Orders</MenuItem>
         
       </Menu>
     </div>

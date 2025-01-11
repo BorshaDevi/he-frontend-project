@@ -24,7 +24,14 @@ const router=createBrowserRouter([
      {
       path:'/register',
       Component:Register,
-     }
+     },
+     {
+      path:'/menu',
+
+     },
+     {
+      path:'/orders'
+     },
     ]
   }
 ])
