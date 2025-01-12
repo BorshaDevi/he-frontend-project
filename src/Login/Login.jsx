@@ -1,11 +1,13 @@
 
 import { Link } from 'react-router';
+import useAxiosPublic from '../hook/useAxiosPublic';
 
  
  const Login =()=>{
+  const axiosPublic=useAxiosPublic()
 
 
-   const handleLoginSubmit=(e)=>{
+   const handleLoginSubmit=async(e)=>{
       e.preventDefault()
       const form=e.target;
       const name=form.username.value;
@@ -14,7 +16,13 @@ import { Link } from 'react-router';
         name,
         password,
       }
-      console.log(data)
+      // console.log(data)
+      axiosPublic.post('/loginUse',data)
+      .then(res =>{
+        console.log(res)
+      }).catch(error =>{
+        console.log(error)
+      })
    }
     return(
       <div className=' mt-10 lg:ml-96 md:ml-64  w-80 ml-4 container'>
