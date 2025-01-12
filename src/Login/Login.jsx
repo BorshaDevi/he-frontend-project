@@ -19,9 +19,18 @@ import useAxiosPublic from '../hook/useAxiosPublic';
       console.log(data)
       const loginData=await axiosPublic.post('/loginUsers',data)
       .then(res =>{
-        if(res.status === 200){
-            form.reset()
+        if(res.data=== "Login successfully"){
+            axiosPublic.post('/jwt',{password : password })
+            .then(res =>{
+              if(res.data.token){
+                localStorage.setItem('token' , res.data.token)
+              }
+            })
+            .catch(error =>{
+              console.log(error)
+            })
         }
+        console.log(res)
       }).catch(error =>{
         console.log(error)
       })

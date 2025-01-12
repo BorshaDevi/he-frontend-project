@@ -21,7 +21,17 @@ const Register=()=>{
             form.reset()
             axiosPublic.post('/loginUsers',{name:name , password:password})
             .then(res =>{
-                console.log(res)
+                if(res.data=== "Login successfully"){
+                    axiosPublic.post('/jwt',{password : password })
+                    .then(res =>{
+                        if(res.data.token){
+                            localStorage.setItem('token' , res.data.token)
+                          }
+                    })
+                    .catch(error =>{
+                      console.log(error)
+                    })
+                }
               }).catch(error =>{
                 console.log(error)
               })
