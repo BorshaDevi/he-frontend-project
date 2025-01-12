@@ -17,12 +17,14 @@ import useAxiosPublic from '../hook/useAxiosPublic';
         password,
       }
       console.log(data)
-      // axiosPublic.post('/loginUse',data)
-      // .then(res =>{
-      //   console.log(res)
-      // }).catch(error =>{
-      //   console.log(error)
-      // })
+      const loginData=await axiosPublic.post('/loginUsers',data)
+      .then(res =>{
+        if(res.status === 200){
+            form.reset()
+        }
+      }).catch(error =>{
+        console.log(error)
+      })
    }
     return(
       <div className=' mt-10 lg:ml-96 md:ml-64 md:h-60    md:w-80 md:p-3 shadow-xl container'>

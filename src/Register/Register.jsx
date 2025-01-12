@@ -3,7 +3,7 @@ import useAxiosPublic from "../hook/useAxiosPublic";
 
 const Register=()=>{
     const axiosPublic=useAxiosPublic()
-    const handleRegisterSubmit=e=>{
+    const handleRegisterSubmit=async(e)=>{
         e.preventDefault()
       const form=e.target;
       const name=form.username.value;
@@ -15,12 +15,24 @@ const Register=()=>{
         email
       }
       console.log(data)
-    //   axiosPublic.post('/users',data)
-    //   .then(res =>{
-    //     console.log(res)
-    //   }).catch(error =>{
-    //     console.log(error)
-    //   })
+      const userData=await axiosPublic.post('/users',data)
+      .then(res =>{
+        if(res.status === 200){
+            form.reset()
+            axiosPublic.post('/loginUsers',{name:name , password:password})
+            .then(res =>{
+                console.log(res)
+              }).catch(error =>{
+                console.log(error)
+              })
+
+            
+        }else{
+          console.log('Something is wrong.')
+        }
+      }).catch(error =>{
+        console.log(error)
+      })
     }
     return (
         <>
