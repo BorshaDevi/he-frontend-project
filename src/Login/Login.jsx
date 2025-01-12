@@ -1,63 +1,33 @@
 
-import { FormControl, IconButton, Input, InputAdornment, InputLabel } from '@mui/material';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
+import { Link } from 'react-router';
 
  
  const Login =()=>{
-  const navigate=useNa
-   const handleMouseDownPassword = (event) => {
-     event.preventDefault();
-   };
-   const handleMouseUpPassword = (event) => {
-     event.preventDefault();
-   };
- 
-
-
 
 
    const handleLoginSubmit=(e)=>{
-      e.preventdefault()
+      e.preventDefault()
+      const form=e.target;
+      const name=form.username.value;
+      const password=form.password.value;
+      const data={
+        name,
+        password,
+      }
+      console.log(data)
    }
     return(
-      <Card sx={{ maxWidth: 345 ,
-      }} className=' mt-10 lg:ml-96 md:ml-64  ml-4'>
-      <CardContent className=''>
+      <div className=' mt-10 lg:ml-96 md:ml-64  w-80 ml-4 container'>
         <form onSubmit={handleLoginSubmit} >
-        <FormControl className="w-full"  variant="standard">
-          <InputLabel  htmlFor="standard-adornment-password">Email</InputLabel>
-          <Input
-            id="standard-adornment-password"
-            type= "email"
-          />
-        </FormControl>
-        <FormControl  className="w-full"  variant="standard">
-          <InputLabel  htmlFor="standard-adornment-password">Password</InputLabel>
-          <Input
-            id="standard-adornment-password"
-            type= "password"
-            endAdornment={
-              <InputAdornment position="end">
-                <IconButton
-                  k={handleClickShowPassword}
-                  onMouseDown={handleMouseDownPassword}
-                  onMouseUp={handleMouseUpPassword}
-                >
-                 
-                </IconButton>
-              </InputAdornment>
-            }
-          />
-        </FormControl>
-        <br />
+              <input type="text" name='username' required className='w-full border border-black mt-5 p-1' placeholder='Enter your Name'></input>
+              <br />
+              <input type="password" name="password" required className='w-full border border-black p-1 mt-5' placeholder='Enter your password'  ></input>
+              <br />
         <button className="  p-2  w-full mt-8 bg-blue-300"><input type="submit"  value="Login"/></button>
         </form>
-
-
-        <p>Do not have any account? please </p>
-      </CardContent>
-    </Card>
+        <p>Do not have any account? please <Link to='/register' className='text-sky-700 hover:underline'>Register</Link> </p>
+      </div>
     )
- }
- export default Login;
+  }
+  export default Login;
+  
