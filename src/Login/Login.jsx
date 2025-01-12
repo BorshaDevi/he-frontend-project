@@ -16,16 +16,16 @@ import useAxiosPublic from '../hook/useAxiosPublic';
         name,
         password,
       }
-      // console.log(data)
-      axiosPublic.post('/loginUse',data)
-      .then(res =>{
-        console.log(res)
-      }).catch(error =>{
-        console.log(error)
-      })
+      console.log(data)
+      // axiosPublic.post('/loginUse',data)
+      // .then(res =>{
+      //   console.log(res)
+      // }).catch(error =>{
+      //   console.log(error)
+      // })
    }
     return(
-      <div className=' mt-10 lg:ml-96 md:ml-64  w-80 ml-4 container'>
+      <div className=' mt-10 lg:ml-96 md:ml-64 md:h-60    md:w-80 md:p-3 shadow-xl container'>
         <form onSubmit={handleLoginSubmit} >
               <input type="text" name='username' required className='w-full border border-black mt-5 p-1' placeholder='Enter your Name'></input>
               <br />
