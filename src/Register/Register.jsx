@@ -12,20 +12,21 @@ const Register=()=>{
       const data={
         name,
         password,
-        email
+        email,
+        role:'user'
       }
       console.log(data)
       const userData=await axiosPublic.post('/users',data)
       .then(res =>{
         if(res.status === 200){
-            form.reset()
-            axiosPublic.post('/loginUsers',{name:name , password:password})
+            axiosPublic.post('/loginUsers',{name:name , password:password  })
             .then(res =>{
                 if(res.data=== "Login successfully"){
                     axiosPublic.post('/jwt',{password : password })
                     .then(res =>{
                         if(res.data.token){
                             localStorage.setItem('token' , res.data.token)
+                            form.reset()
                           }
                     })
                     .catch(error =>{

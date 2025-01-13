@@ -15,6 +15,7 @@ import useAxiosPublic from '../hook/useAxiosPublic';
       const data={
         name,
         password,
+        
       }
       console.log(data)
       const loginData=await axiosPublic.post('/loginUsers',data)
@@ -24,6 +25,7 @@ import useAxiosPublic from '../hook/useAxiosPublic';
             .then(res =>{
               if(res.data.token){
                 localStorage.setItem('token' , res.data.token)
+                form.reset()
               }
             })
             .catch(error =>{
