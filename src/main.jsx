@@ -12,6 +12,7 @@ import Register from "./Register/Register.jsx"
 import Menu from './Pages/Menu/Menu.jsx'
 import Orders from "./Pages/Orders/Orders.jsx"
 import AddMenu from './Pages/AddMenu/AddMenu.jsx';
+import UpdateMenu from './Pages/UpdateMenu/UpdateMenu.jsx';
 
 
 
@@ -40,6 +41,10 @@ const router=createBrowserRouter([
      {
       path:'/addMenu',
       Component:AddMenu,
+     },
+     {
+      path:'/updateMenu',
+      Component:UpdateMenu,
      },
     ]
   }

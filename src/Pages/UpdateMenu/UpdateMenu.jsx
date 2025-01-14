@@ -1,7 +1,7 @@
-const AddMenu=()=>{
-    return(
-      <div className="mt-10 lg:ml-96 md:ml-64 md:h-60    md:w-96 md:p-3 shadow-2xl container">
-        <h1 className="text-center mt-5 font-bold">Menu Add</h1>
+const UpdateMenu=()=>{
+    return (
+        <div className="mt-10 lg:ml-96 md:ml-64 md:h-60    md:w-96 md:p-3 shadow-2xl container">
+        <h1 className="text-center mt-5 font-bold">Menu Update </h1>
         <form  >
            <div className="md:flex lg:flex ">
            <div>
@@ -38,9 +38,9 @@ const AddMenu=()=>{
             </div>
            </div>
             <br />
-            <input type="submit" className='w-full border border-black bg-sky-400 ' value='Added' />
+            <input type="submit" className='w-full border border-black bg-sky-400 ' value='Updated' />
         </form>
       </div>
     )
 }
-export default AddMenu;
+export default UpdateMenu
