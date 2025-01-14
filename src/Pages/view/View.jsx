@@ -13,8 +13,15 @@ const View=()=>{
             return data.data;
         }
     })
-    const handleOrder=()=>{
+    // const handleQuantity=(e)=>{
+    //     e.preventDefault()
+    //     const quantity=e.target.quantity.value
+    //     console.log(quantity)
+
       
+    // }
+    const handleOrder=()=>{
+
     }
     return(
         <>
@@ -28,7 +35,7 @@ const View=()=>{
                 </div>
                 <p>Quantity:</p>
                 <form >
-                <input type='number' name='quantity'></input>
+                <input type='number' name='quantity ' className=""></input>
                 </form>
                  <button onClick={handleOrder} className="text-center font-bold"><h1 >Order</h1></button>
                   
