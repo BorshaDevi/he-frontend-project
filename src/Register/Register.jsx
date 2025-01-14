@@ -13,7 +13,6 @@ const Register=()=>{
         name,
         password,
         email,
-        role:'user'
       }
       console.log(data)
       const userData=await axiosPublic.post('/users',data)
