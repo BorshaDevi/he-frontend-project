@@ -25,7 +25,7 @@ const View=()=>{
                 </div>
                 <p>Quantity:</p>
                  <h1 className="text-center font-bold">Order</h1>
-
+                  
         </div>
         </>
     )
