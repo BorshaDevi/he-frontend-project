@@ -13,6 +13,9 @@ const View=()=>{
             return data.data;
         }
     })
+    const handleOrder=()=>{
+      
+    }
     return(
         <>
         <div className="bg-sky-300 p-5 shadow-xl">
@@ -24,7 +27,10 @@ const View=()=>{
                     
                 </div>
                 <p>Quantity:</p>
-                 <h1 className="text-center font-bold">Order</h1>
+                <form >
+                <input type='number' name='quantity'></input>
+                </form>
+                 <button onClick={handleOrder} className="text-center font-bold"><h1 >Order</h1></button>
                   
         </div>
         </>
