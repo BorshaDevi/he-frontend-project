@@ -13,10 +13,12 @@ import Menu from './Pages/Menu/Menu.jsx'
 import Orders from "./Pages/Orders/Orders.jsx"
 import AddMenu from './Pages/AddMenu/AddMenu.jsx';
 import UpdateMenu from './Pages/UpdateMenu/UpdateMenu.jsx';
+import View from './Pages/view/View.jsx'
 import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
+import Home from './Pages/Home/Home.jsx';
 
 const queryClient = new QueryClient()
 
@@ -26,6 +28,10 @@ const router=createBrowserRouter([
     path:'/',
     Component:Root,
     children:[
+      {
+        path:'/',
+        Component:Home,
+      },
      {
       path:'/login',
       Component:Login,
@@ -48,9 +54,13 @@ const router=createBrowserRouter([
       Component:AddMenu,
      },
      {
-      path:'/updateMenu',
+      path:'/updateMenu/:id',
       Component:UpdateMenu,
      },
+     {
+      path:'/view/:id',
+      Component:View,
+     }
     ]
   }
 ])

@@ -41,7 +41,6 @@ const AddMenu=()=>{
             <label htmlFor="category" className="md:ml-5">Category</label>
             <br />
             <select required  className="border-black border w-full md:ml-5" name='category'>
-                <option value=''>Select</option>
                 <option value='appetizers'>Appetizers</option>
                 <option value='mainCourse'>Main Course</option>
                 <option value='desserts'>Desserts</option>
@@ -58,7 +57,6 @@ const AddMenu=()=>{
             <label htmlFor="availability" className="md:ml-5 ">Availability</label>
             <br />
             <select required name="availability" className="border-black border w-full md:ml-5" >
-                <option value="">Select</option>
                 <option value="available">Available</option>
                 <option value="notAvailable">Not Available</option>
             </select>
