@@ -13,7 +13,6 @@ import Menu from './Pages/Menu/Menu.jsx'
 import Orders from "./Pages/Orders/Orders.jsx"
 import AddMenu from './Pages/AddMenu/AddMenu.jsx';
 import UpdateMenu from './Pages/UpdateMenu/UpdateMenu.jsx';
-import View from './Pages/view/View.jsx'
 import {
   QueryClient,
   QueryClientProvider,
@@ -57,10 +56,6 @@ const router=createBrowserRouter([
       path:'/updateMenu/:id',
       Component:UpdateMenu,
      },
-     {
-      path:'/view/:id',
-      Component:View,
-     }
     ]
   }
 ])
